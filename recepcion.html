@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recepción - Maquiladora San José</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <header class="navbar navbar-dark sticky-top bg-maquila flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="dashboard.html">Maquiladora San José</a>
+        <div class="w-100"><span class="text-white mx-3">Módulo: Recepción</span></div>
+        <div class="navbar-nav">
+            <div class="nav-item text-nowrap">
+                <a class="nav-link px-3" href="login.html">Salir <i class="bi bi-box-arrow-right"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid py-4">
+        <div class="row justify-content-center">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse pt-3">
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html"><i class="bi bi-arrow-left-circle-fill me-2"></i> Volver al Dashboard</a></li>
+                </ul>
+            </nav>
+            
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-4">
+                <h1 class="h2 mb-4 text-maquila">Registro de Lote de Limón Entrante</h1>
+                <p class="text-muted">Complete los datos para iniciar la trazabilidad y el control de inventario.</p>
+
+                <div class="card shadow-sm mb-5">
+                    <div class="card-body p-4">
+                        <form>
+                            <div class="row g-4">
+                                
+                                <h5 class="border-bottom pb-2 mb-4 text-secondary border-maquila"><i class="bi bi-geo-alt-fill me-2"></i> Origen y Clasificación</h5>
+
+                                <div class="col-md-6">
+                                    <label for="proveedor" class="form-label fw-bold">Proveedor / Origen del Campo</label>
+                                    <select class="form-select" id="proveedor" required>
+                                        <option value="">Seleccione el proveedor...</option>
+                                        <option>Campo El Limonal</option>
+                                        <option>Agropecuario del Golfo</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <label for="calidad" class="form-label fw-bold">Calidad de Limón</label>
+                                    <select class="form-select" id="calidad" required>
+                                        <option value="">Seleccione la calidad...</option>
+                                        <option>Persa #1 (Exportación)</option>
+                                        <option>Merma (Industrial)</option>
+                                    </select>
+                                </div>
+
+                                <h5 class="border-bottom pb-2 mb-4 mt-5 text-secondary border-maquila"><i class="bi bi-speedometer me-2"></i> Datos de Pesaje</h5>
+                                
+                                <div class="col-md-4">
+                                    <label for="pesoBruto" class="form-label fw-bold">Peso Bruto Total (Kg)</label>
+                                    <input type="number" class="form-control" id="pesoBruto" placeholder="Ej: 1550" required>
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <label for="tara" class="form-label fw-bold">Peso Tara (Kg)</label>
+                                    <input type="number" class="form-control" id="tara" placeholder="Ej: 50" required>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label for="pesoNeto" class="form-label fw-bold">Peso Neto (Kg)</label>
+                                    <input type="text" class="form-control bg-light fw-bold" id="pesoNeto" value="1500" disabled>
+                                </div>
+
+                                <div class="col-12 mt-4">
+                                    <label for="observaciones" class="form-label"><i class="bi bi-chat-left-text-fill me-2"></i> Observaciones</label>
+                                    <textarea class="form-control" id="observaciones" rows="3" placeholder="Ej: Inspección visual aprobada."></textarea>
+                                </div>
+                            </div>
+                            
+                            <hr class="my-5" />
+                            <div class="d-flex justify-content-end">
+                                <button type="submit" class="btn btn-lg btn-maquila me-3">
+                                    <i class="bi bi-save-fill me-2"></i> Registrar Lote
+                                </button>
+                                <a href="dashboard.html" class="btn btn-lg btn-secondary">
+                                    Cancelar
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
